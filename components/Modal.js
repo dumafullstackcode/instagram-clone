@@ -1,6 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { CameraIcon } from "@heroicons/react/outline";
-import { image } from "faker";
+// import { image } from "faker";
 import {
   addDoc,
   updateDoc,
@@ -9,7 +9,7 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import { useRef, useState } from "react";
-import { Fragment } from "react/cjs/react.production.min";
+import { Fragment } from "react";
 import { useRecoilState } from "recoil";
 import { modalState } from "../atoms/modalAtoms";
 import { db, storage } from "../firebase";
@@ -78,7 +78,7 @@ function Modal() {
         onClose={setOpen}
       >
         <div
-          className="flex items-end justify-center 
+          className="flex items-end justify-center
         min-h-[800px] sm:min-h-screen pt-4
         pb-20 text-center sm:block sm:p-0"
         >
@@ -174,9 +174,9 @@ function Modal() {
                     <button
                       type="button"
                       disabled={!selectedFile}
-                      className="inline-flex justify-center w-full rounded-md border 
+                      className="inline-flex justify-center w-full rounded-md border
                       border-transparent shadow-sm px-4
-                      py-2 bg-red-600 text-base font-medium 
+                      py-2 bg-red-600 text-base font-medium
                       text-white hover:bg-red-700 focus:outline-none focus:ring-2
                       focus:ring-offset-2 focus:ring-red-500 sm:text-sm disabled:bg-gray-300
                       disabled:cursor-not-allowed hover:disabled:bg-gray-300"
